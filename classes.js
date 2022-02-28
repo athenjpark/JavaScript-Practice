@@ -67,5 +67,23 @@ var hazelnutLatte = new Latte("double", "hazelnut", "almond milk")
 console.log(hazelnutLatte.latteProfile())
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+class Cylinder{
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+    this.pi = Math.PI
+  }
+  calculateVolume(){
+    return this.pi*this.radius*this.radius*this.height
+  }
+}
 
 // Write the code that creates three unique cylinder objects
+var cylinder1 = new Cylinder(5, 10)
+console.log(cylinder1.calculateVolume().toFixed(4))
+
+var cylinder2 = new Cylinder(7,12)
+console.log(cylinder2.calculateVolume().toFixed(4))
+
+var cylinder3 = new Cylinder(10,13)
+console.log(cylinder3.calculateVolume().toFixed(4))
